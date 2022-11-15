@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+#headerImage {
+    background-image: url("images/chalk-press-logo.webp");
+    background-position: center !important;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    display: block;
+    height: 6em;
+    max-width: 100% !important;
+    position: relative;
+    background-size: contain;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  padding: 5% 10%;
+}
