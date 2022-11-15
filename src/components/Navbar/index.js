@@ -1,6 +1,5 @@
 import React from "react";
 import { Nav, NavLink, NavMenu } from "./NavbarElements";
-import chalkPressLogo from'../../images/chalk-press-logo.webp';
 
 const Navbar = () => {
   return (
