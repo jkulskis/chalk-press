@@ -54,3 +54,16 @@
   justify-content: center;
   padding: 5% 10%;
 }
+
+@media screen and (max-width: 768px) {
+  .video {
+    width: 90% !important;
+    max-height: 30% !important;
+  }
+}
+
+div[type="gumBlob"]:hover {
+  background-size: 110% !important;
+  color: red !important;
+  z-index: 4 !important;
+}

@@ -4,7 +4,6 @@ import { Nav, NavLink, NavMenu } from "./NavbarElements";
 const Navbar = () => {
   return (
     <>
-    <div id="headerImage"></div>
       <Nav>
         <NavMenu>
           <NavLink to="/" activeStyle>
