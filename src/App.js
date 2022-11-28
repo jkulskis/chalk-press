@@ -6,7 +6,7 @@ import Home from "./pages/home";
 import Shop from "./pages/shop";
 import Press from "./pages/press";
 import About from "./pages/about";
-import Video from "./pages/video";
+import Archive from "./pages/archive";
 import Friends from "./pages/friends";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/press" element={<Press />} />
         <Route path="/about" element={<About />} />
-        <Route path="/video" element={<Video />} />
+        <Route path="/archive" element={<Archive />} />
         <Route path="/friends" element={<Friends />} />
       </Routes>
     </Router>

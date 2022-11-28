@@ -67,3 +67,24 @@ div[type="gumBlob"]:hover {
   color: red !important;
   z-index: 4 !important;
 }
+
+@media only screen and (max-width: 1300px) {
+  div[type="gumBlob"] {
+    width: 27vmax !important;
+    height: 27vmax !important;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  div[type="gumBlob"] {
+    width: 25vmax !important;
+    height: 25vmax !important;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  div[type="gumBlob"] {
+    width: 25vmax !important;
+    height: 25vmax !important;
+  }
+}
