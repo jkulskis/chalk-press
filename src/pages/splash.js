@@ -1,16 +1,10 @@
 import { Link } from "react-router-dom";
-// import GumBlue from "../images/gum_blue.png";
-// import GumGold from "../images/gum_gold.png";
-// import GumGreen from "../images/gum_green.png";
-// import GumPink from "../images/gum_pink.png";
-// import GumRed from "../images/gum_red.png";
-// import GumWhite from "../images/gum_white.png";
-import GumAbout from "../images/aboutpage_scroll.png"
-import GumArchive from "../images/archivepage_scroll.png"
-import GumHome from "../images/homepage_scroll.png"
-import GumFriends from "../images/palspage_scroll.png"
-import GumPress from "../images/presspage_scroll.png"
-import GumShop from "../images/shop_scroll.png"
+import GumAbout from "../images/gum/aboutpage_noscroll.png"
+import GumArchive from "../images/gum/archivepage_noscroll.png"
+import GumHome from "../images/gum/homepage_noscroll.png"
+import GumFriends from "../images/gum/palspage_noscroll.png"
+import GumPress from "../images/gum/presspage_noscroll.png"
+import GumShop from "../images/gum/shop_noscroll.png"
 
 function randomOffCenter(center, distance) {
   return Math.random() < 0.5
@@ -18,18 +12,18 @@ function randomOffCenter(center, distance) {
     : center + Math.floor(Math.random() * distance);
 }
 
-const GumBlob = ({ props, style, children, to }) => (
+const GumBlob = ({ style, to, id }) => (
   <Link to={to}>
     <div
+      id={id}
       type="gumBlob"
       animationDuration="0s"
-      size={`${randomOffCenter(20, 3)}vmax`}
       style={{
-        width: "21vmax",
-        height: "21vmax",
+        width: "15vmax",
+        height: "15vmax",
         position: "absolute",
         backgroundRepeat: "no-repeat",
-        backgroundSize: `${randomOffCenter(95, 5)}%`,
+        backgroundSize: `${randomOffCenter(130, 5)}%`,
         transform: `rotate(${randomOffCenter(0, 30)}deg)`,
         backgroundPosition: "center",
         color: "black",
@@ -40,116 +34,95 @@ const GumBlob = ({ props, style, children, to }) => (
         textAlign: "center",
         ...style,
       }}
-      {...props}
     >
-      {children}
     </div>
   </Link>
 );
 
-const GumBlobAbout = ({ props, style, children, to }) => (
+const GumBlobAbout = (props) => (
   <GumBlob
-    to={to}
     style={{
-      top: `${randomOffCenter(0, 2)}%`,
+      top: `${randomOffCenter(5, 2)}%`,
       left: `${randomOffCenter(6, 2)}%`,
       backgroundImage: `url(${GumAbout})`,
-      ...style,
     }}
     {...props}
   >
-    {children}
   </GumBlob>
 );
 
-const GumBlobFriends = ({ props, style, children, to }) => (
+const GumBlobFriends = (props) => (
   <GumBlob
-    to={to}
     style={{
       top: `${randomOffCenter(32, 2)}%`,
       left: `${randomOffCenter(60, 2)}%`,
       backgroundImage: `url(${GumFriends})`,
-      ...style,
     }}
     {...props}
   >
-    {children}
   </GumBlob>
 );
 
-const GumBlobHome = ({ props, style, children, to }) => (
+const GumBlobHome = (props) => (
   <GumBlob
-    to={to}
     style={{
       top: `${randomOffCenter(47, 2)}%`,
       left: `${randomOffCenter(45, 2)}%`,
       backgroundImage: `url(${GumHome})`,
-      ...style,
     }}
     {...props}
   >
-    {children}
   </GumBlob>
 );
 
-const GumBlobPress = ({ props, style, children, to }) => (
+const GumBlobPress = (props) => (
   <GumBlob
-    to={to}
     style={{
       top: `${randomOffCenter(27, 0)}%`,
       left: `${randomOffCenter(30, 0)}%`,
       right: `${randomOffCenter(30, 0)}%`,
       backgroundImage: `url(${GumPress})`,
-      ...style,
     }}
     {...props}
   >
-    {children}
   </GumBlob>
 );
 
-const GumBlobShop = ({ props, style, children, to }) => (
+const GumBlobShop = (props) => (
   <GumBlob
-    to={to}
     style={{
       top: `${randomOffCenter(47, 2)}%`,
       left: `${randomOffCenter(6, 2)}%`,
       backgroundImage: `url(${GumShop})`,
-      ...style,
     }}
     {...props}
   >
-    {children}
   </GumBlob>
 );
 
-const GumBlobArchive = ({ props, style, children, to }) => (
+const GumBlobArchive = (props) => (
   <GumBlob
-    to={to}
     style={{
-      top: `${randomOffCenter(0, 2)}%`,
+      top: `${randomOffCenter(5, 2)}%`,
       left: `${randomOffCenter(42, 2)}%`,
       backgroundImage: `url(${GumArchive})`,
-      ...style,
     }}
     {...props}
   >
-    {children}
   </GumBlob>
 );
 
 const Splash = () => {
   return (
     <>
-      <GumBlobAbout to="/about"></GumBlobAbout>
-      <GumBlobFriends to="/friends"></GumBlobFriends>
-      <GumBlobHome to="/home"></GumBlobHome>
-      <GumBlobPress to="/press"></GumBlobPress>
-      <GumBlobShop to="/shop"></GumBlobShop>
-      <GumBlobArchive to="/archive"></GumBlobArchive>
+      <GumBlobAbout to="/about" id="about-blob"></GumBlobAbout>
+      <GumBlobFriends to="/friends" id="friends-blob"></GumBlobFriends>
+      <GumBlobHome to="/home" id="home-blob"></GumBlobHome>
+      <GumBlobPress to="/press" id="press-blob"></GumBlobPress>
+      <GumBlobShop to="/shop" id="shop-blob"></GumBlobShop>
+      <GumBlobArchive to="/archive" id="archive-blob"></GumBlobArchive>
     </>
   );
 };
 
-document.body.style.backgroundColor = "gray";
 export default Splash;

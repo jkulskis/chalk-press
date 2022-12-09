@@ -1,0 +1,49 @@
+.navlink {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.navlink:link {
+  text-decoration: none;
+}
+
+.navlink:visited {
+  text-decoration: none;
+}
+
+.navlink:hover {
+	opacity: 80%;
+}
+
+.navlink:active {
+  text-decoration: none;
+}
+
+.navbox {
+	background-color: black;	
+	display: inline-block;
+}
+
+#navHome {
+	color: #e3f400;
+}
+
+#navAbout {
+	color: #00e91a;
+}
+
+#navShop {
+	color: #ff152f;
+}
+
+#navPress {
+	color: #ffba4a;
+}
+
+#navArchive {
+	color: 	#04cfdf;
+}
+
+#navFriends {
+	color: 	#e7ffdf;
+}

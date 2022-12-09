@@ -1,52 +1,7 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-#headerImage {
-    background-image: url("images/chalk-press-logo.webp");
-    background-position: center !important;
-    background-repeat: no-repeat;
-    color: #FFFFFF;
-    display: block;
-    height: 6em;
-    max-width: 100% !important;
-    position: relative;
-    background-size: contain;
+body {
+  /* background-image: linear-gradient(rgb(18, 16, 16), rgb(25, 22, 22)), url("images/sidewalk_background.jpg"); */
+  background-image: url("images/sidewalk_background.jpg");
+  /* filter: opacity(1) drop-shadow(0 0 0 #350b5f); */
 }
 
 .center {
@@ -55,36 +10,83 @@
   padding: 5% 10%;
 }
 
-@media screen and (max-width: 768px) {
-  .video {
-    width: 90% !important;
-    max-height: 30% !important;
-  }
+/* Gum Splash Screen / Home */
+
+#about-blob:hover {
+  background-image: url("images/gum/aboutpage_scroll.png") !important;
+}
+
+#friends-blob:hover {
+  background-image: url("images/gum/palspage_scroll.png") !important;
+}
+
+#home-blob:hover {
+  background-image: url("images/gum/homepage_scroll.png") !important;
+}
+
+#press-blob:hover {
+  background-image: url("images/gum/presspage_scroll.png") !important;
+}
+
+#shop-blob:hover {
+  background-image: url("images/gum/shop_scroll.png") !important;
+}
+
+#archive-blob:hover {
+  background-image: url("images/gum/archivepage_scroll.png") !important;
 }
 
 div[type="gumBlob"]:hover {
-  background-size: 110% !important;
-  color: red !important;
-  z-index: 4 !important;
+  z-index: 0 !important;
 }
 
 @media only screen and (max-width: 1300px) {
   div[type="gumBlob"] {
-    width: 27vmax !important;
-    height: 27vmax !important;
+    width: 23vmax !important;
+    height: 23vmax !important;
   }
 }
 
 @media only screen and (max-width: 1000px) {
   div[type="gumBlob"] {
-    width: 25vmax !important;
-    height: 25vmax !important;
+    width: 22vmax !important;
+    height: 22vmax !important;
   }
 }
 
 @media only screen and (max-width: 700px) {
   div[type="gumBlob"] {
-    width: 25vmax !important;
-    height: 25vmax !important;
+    width: 20vmax !important;
+    height: 20vmax !important;
+  }
+
+  div[type="gumBlob"]:hover {
+    background-size: 140% !important;
+    z-index: 4 !important;
+  }
+
+  /* On mobile always display the scroll version of the gum image */
+  #about-blob {
+    background-image: url("images/gum/aboutpage_scroll.png") !important;
+  }
+
+  #friends-blob {
+    background-image: url("images/gum/palspage_scroll.png") !important;
+  }
+
+  #home-blob {
+    background-image: url("images/gum/homepage_scroll.png") !important;
+  }
+
+  #press-blob {
+    background-image: url("images/gum/presspage_scroll.png") !important;
+  }
+
+  #shop-blob {
+    background-image: url("images/gum/shop_scroll.png") !important;
+  }
+
+  #archive-blob {
+    background-image: url("images/gum/archivepage_scroll.png") !important;
   }
 }

@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#chalkPressLogo {
+  width: 40vw;
+  right: 2%;
+  top: 10%;
+  position: absolute;
+  rotate: 10deg;
+  filter: drop-shadow(0 0 0 #350b5f);
+}
+
+@media only screen and (max-width: 700px) {
+  #chalkPressLogo {
+    width: 70vw;
+    height: 20vh;
+    top: 1%;
+    rotate: 0deg;
+  }
+}

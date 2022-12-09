@@ -1,6 +1,9 @@
+import NavMenu from "../components/NavMenu"
+
 const About = () => {
   return (
     <>
+      <NavMenu />
       <div class="center">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consectetur rem reprehenderit quaerat ex
         facilis laudantium fugiat voluptas numquam vero assumenda sequi repellat commodi, a, odio sed, incidunt sapiente
