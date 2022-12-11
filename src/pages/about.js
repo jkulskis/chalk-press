@@ -1,4 +1,3 @@
-import NavMenu from "../components/NavMenu";
 import ContentBox from "../components/ContentBox";
 
 const About = () => {
