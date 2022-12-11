@@ -1,16 +1,18 @@
+import ContentBox from "../components/ContentBox";
+
 const Video = () => {
   return (
     <>
-      <iframe
-        class="center video"
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/6WQhuopFtvo"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+      <ContentBox>
+          <iframe
+            className="av"
+            src="https://www.youtube.com/embed/6WQhuopFtvo"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+      </ContentBox>
     </>
   );
 };

@@ -13,23 +13,18 @@ const NavMenu = () => {
         <NavLink to="/" id="navHome">
           Home
         </NavLink>
-        <br />
         <NavLink to="/about" id="navAbout">
           About
         </NavLink>
-        <br />
         <NavLink to="/shop" id="navShop">
           Shop
         </NavLink>
-        <br />
         <NavLink to="/press" id="navPress">
           Press
         </NavLink>
-        <br />
         <NavLink to="/archive" id="navArchive">
           Archive
         </NavLink>
-        <br />
         <NavLink to="/friends" id="navFriends">
           Friends
         </NavLink>

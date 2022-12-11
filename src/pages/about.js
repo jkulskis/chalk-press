@@ -1,18 +1,22 @@
-import NavMenu from "../components/NavMenu"
+import NavMenu from "../components/NavMenu";
+import ContentBox from "../components/ContentBox";
 
 const About = () => {
   return (
     <>
-      <NavMenu />
-      <div class="center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consectetur rem reprehenderit quaerat ex
-        facilis laudantium fugiat voluptas numquam vero assumenda sequi repellat commodi, a, odio sed, incidunt sapiente
-        dolorum tenetur. Tenetur reprehenderit laboriosam aspernatur accusamus iure a esse earum, enim impedit,
-        quibusdam numquam voluptas delectus? Molestiae unde fugiat aliquam at mollitia, eum iste quia neque vero
-        aliquid, aut odio repudiandae, quaerat in accusamus? Minus impedit, mollitia eveniet maiores facere eaque
-        ducimus aspernatur excepturi officiis velit sit iure quo ea corporis voluptates voluptas deleniti, alias
-        possimus qui ipsa est aliquid distinctio asperiores. Nihil, mollitia doloremque. Tenetur ex ipsa dicta dolorum!
-      </div>
+      <ContentBox>
+        <p>
+          Chalk.press is an interdisciplinary multifaceted collaborative emphatic trilingual collective which engages in
+          assiduous textile-based exigent operations across a variety of efflorescent spheres, ambits, and perimetrices,
+          constantly pursuing effective material-centric solutions to a plethora of quagmires via a diversity of various
+          segments.
+        </p>
+        <p>
+          Items are sewn, embroidered, dyed, and printed by hand. Blanks are either upcycled or sourced from domestic,
+          unionized, producers. Dyes are ecologically derived from foraged plants and metals.
+        </p>
+        <p>Because of the handmade nature of our products, slight differentiation may occur. Plz don’t freak out!</p>
+      </ContentBox>
     </>
   );
 };

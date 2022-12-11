@@ -1,13 +1,9 @@
 body {
   /* background-image: linear-gradient(rgb(18, 16, 16), rgb(25, 22, 22)), url("images/sidewalk_background.jpg"); */
   background-image: url("images/sidewalk_background.jpg");
+  /* display: flex;
+  justify-content: center; */
   /* filter: opacity(1) drop-shadow(0 0 0 #350b5f); */
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  padding: 5% 10%;
 }
 
 /* Gum Splash Screen / Home */
@@ -68,25 +64,110 @@ div[type="gumBlob"]:hover {
   /* On mobile always display the scroll version of the gum image */
   #about-blob {
     background-image: url("images/gum/aboutpage_scroll.png") !important;
+    top: 25% !important;
   }
 
   #friends-blob {
     background-image: url("images/gum/palspage_scroll.png") !important;
+    top: 52% !important;
   }
 
   #home-blob {
     background-image: url("images/gum/homepage_scroll.png") !important;
+    top: 67% !important;
   }
 
   #press-blob {
     background-image: url("images/gum/presspage_scroll.png") !important;
+    top: 47% !important;
   }
 
   #shop-blob {
     background-image: url("images/gum/shop_scroll.png") !important;
+    top: 67% !important;
   }
 
   #archive-blob {
     background-image: url("images/gum/archivepage_scroll.png") !important;
+    top: 25% !important;
+  }
+}
+
+/* General Content Pages */
+
+/* content box */
+.cb {
+  width: 70vw;
+  margin: auto;
+  display: flex;
+}
+
+/* content box children div */
+
+.cbc {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 20vh;
+  font-weight: bold;
+  color: blue;
+  font-size: 1.5em;
+  margin: 20vh 15vw 0 15vw;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  max-width: min-content;
+}
+
+.navbox {
+  margin-top: 20vh;
+}
+
+.songbox {
+  display: flex;
+  font-size: 1.5em;
+  color: green;
+  font-weight: bold;
+  background-color: gray;
+  align-items: center;
+}
+
+
+/* Archive Video */
+.av {
+  width: 30vw;
+  height: 30vh;
+  display: block;
+  border: 2px solid red;
+  margin: 0 auto;
+}
+
+/* Press */
+#press-image {
+  max-width: 65vw;
+  border: 2px solid #350b5f;
+}
+
+/* Friends */
+#ardzendaya-image {
+  max-width: 65vw;
+  border: 2px solid black;
+}
+
+@media only screen and (max-width: 700px) {
+  .cb {
+    width: 100%;
+  }
+  .cbc {
+    margin: 25vh 5vw 0 5vw;
+  }
+  .navbox {
+    margin-top: 0;
+  }
+  .av {
+    width: 70vw;
   }
 }
