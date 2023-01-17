@@ -5,7 +5,7 @@ const Friends = () => {
   return (
     <>
       <ContentBox>
-        <img id="ardzendaya-image" src={ArdZendayaImage} alt="chalk press press ;)" />
+        <img id="ardzendaya-image" src={ArdZendayaImage} alt="chalk press friends :)" />
       </ContentBox>
     </>
   );

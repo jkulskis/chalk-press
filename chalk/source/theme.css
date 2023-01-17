@@ -1,0 +1,484 @@
+/* ------------------------------------------------------------------------------------------------
+ *
+ * This is where all of the CSS code is handled for your theme.
+ *
+ * We recommend you break your CSS into multiple files and put them in a separate
+ * directory. We've used a "stylesheets" directory in our example below. After that we'll use
+ * Sprockets (getsprockets.org) to package them into one file. Sprockets also allows you to
+ * use Sass/SCSS (sass-lang.com) by ending your file name with .sass or .scss, and you can also
+ * use LESS (lesscss.org) by ending your file with .less.
+ *
+ * However, if you don't have much CSS, or you're just a glutton for punishment,
+ * you could simply put all of your CSS in this file. It's up to you.
+ *
+ * ------------------------------------------------------------------------------------------------
+ */
+
+/*
+ * Here we're including a 3rd-party stylesheet we put in stylesheets/vendor written in normal CSS,
+ * as well as a few custom Sass stylesheets we've written for different areas of the store
+ *
+ *= require_directory ./stylesheets/vendor
+ *= require stylesheets/layout
+ *= require stylesheets/products
+ *= require stylesheets/product
+ *= require stylesheets/cart
+ *
+ */
+
+#chalkPressLogo {
+  width: 40vw;
+  right: 2%;
+  top: 10%;
+  position: absolute;
+  rotate: 10deg;
+  filter: drop-shadow(0 0 0 #350b5f);
+}
+
+@media only screen and (max-width: 700px) {
+  #chalkPressLogo {
+    width: 70vw;
+    height: 15vh;
+    top: 1%;
+    rotate: 0deg;
+  }
+}
+
+body {
+  background-image: url("images/sidewalk_background.jpg");
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* gum splash screen / home */
+
+#about-blob {
+  background-image: url("images/gum/aboutpage_noscroll.png");
+  top: 5%;
+  left: 6%;
+  transform: rotate(-15deg);
+}
+
+#friends-blob {
+  background-image: url("images/gum/palspage_noscroll.png");
+  top: 32%;
+  left: 60%;
+  transform: rotate(10deg);
+}
+
+#home-blob {
+  background-image: url("images/gum/homepage_noscroll.png");
+  top: 47%;
+  left: 45%;
+  transform: rotate(-30deg);
+}
+
+#press-blob {
+  background-image: url("images/gum/presspage_noscroll.png");
+  top: 27%;
+  left: 30%;
+  transform: rotate(22deg);
+}
+
+#shop-blob {
+  background-image: url("images/gum/shop_noscroll.png");
+  top: 47%;
+  left: 6%;
+  transform: rotate(-4deg);
+}
+
+#archive-blob {
+  background-image: url("images/gum/archivepage_noscroll.png");
+  top: 5%;
+  left: 42%;
+  transform: rotate(12deg);
+}
+
+
+#about-blob:hover {
+  background-image: url("images/gum/aboutpage_scroll.png") !important;
+}
+
+#friends-blob:hover {
+  background-image: url("images/gum/palspage_scroll.png") !important;
+}
+
+#home-blob:hover {
+  background-image: url("images/gum/homepage_scroll.png") !important;
+}
+
+#press-blob:hover {
+  background-image: url("images/gum/presspage_scroll.png") !important;
+}
+
+#shop-blob:hover {
+  background-image: url("images/gum/shop_scroll.png") !important;
+}
+
+#archive-blob:hover {
+  background-image: url("images/gum/archivepage_scroll.png") !important;
+}
+
+div[type="gumBlob"]:hover {
+  z-index: 0 !important;
+}
+
+div[type="gumBlob"] {
+  width: 15vmax;
+  height: 15vmax;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 130%;
+  background-position: center;
+}
+
+@media only screen and (max-width: 1300px) {
+  div[type="gumBlob"] {
+    width: 23vmax !important;
+    height: 23vmax !important;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  div[type="gumBlob"] {
+    width: 22vmax !important;
+    height: 22vmax !important;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  div[type="gumBlob"] {
+    width: 20vmax !important;
+    height: 20vmax !important;
+  }
+
+  div[type="gumBlob"]:hover {
+    background-size: 140% !important;
+    z-index: 4 !important;
+  }
+
+  /* On mobile always display the scroll version of the gum image */
+  #about-blob {
+    background-image: url("images/gum/aboutpage_scroll.png") !important;
+    top: 25% !important;
+  }
+
+  #friends-blob {
+    background-image: url("images/gum/palspage_scroll.png") !important;
+    top: 52% !important;
+  }
+
+  #home-blob {
+    background-image: url("images/gum/homepage_scroll.png") !important;
+    top: 67% !important;
+  }
+
+  #press-blob {
+    background-image: url("images/gum/presspage_scroll.png") !important;
+    top: 47% !important;
+  }
+
+  #shop-blob {
+    background-image: url("images/gum/shop_scroll.png") !important;
+    top: 67% !important;
+  }
+
+  #archive-blob {
+    background-image: url("images/gum/archivepage_scroll.png") !important;
+    top: 25% !important;
+  }
+}
+
+ 
+.navlink {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.navlink:link {
+  text-decoration: none;
+}
+
+.navlink:visited {
+  text-decoration: none;
+}
+
+.navlink:hover {
+	opacity: 80%;
+}
+
+.navlink:active {
+  text-decoration: none;
+}
+
+.navbox {
+	background-color: black;	
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: max-content;
+}
+
+#navHome {
+	color: #e3f400;
+}
+
+#navAbout {
+	color: #00e91a;
+}
+
+#navShop {
+	color: #ff152f;
+}
+
+#navPress {
+	color: #ffba4a;
+}
+
+#navArchive {
+	color: 	#04cfdf;
+}
+
+#navFriends {
+	color: 	#e7ffdf;
+}
+
+/* General Content Pages */
+
+/* content box */
+.cb {
+  width: 70vw;
+  margin: auto;
+  display: flex;
+}
+
+/* content box children div */
+
+.cbc {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 20vh;
+  font-weight: bold;
+  color: blue;
+  font-size: 1.5em;
+  /* margin: 20vh 15vw 0 15vw; */
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  max-width: min-content;
+}
+
+.sidebar-cart {
+  background-color: black;
+}
+
+.sidebar-cart a {
+  color: rgb(255, 208, 0);
+}
+
+.navbox {
+  margin-top: 15vh;
+}
+
+.songbox {
+  display: flex;
+  font-size: 1.5em;
+  color: green;
+  font-weight: bold;
+  background-color: gray;
+  align-items: center;
+}
+
+
+/* Archive Video */
+.av {
+  width: 30vw;
+  height: 30vh;
+  display: block;
+  border: 2px solid red;
+  margin: 0 auto;
+}
+
+/* Press */
+#press-image {
+  max-width: 65vw;
+  border: 2px solid #350b5f;
+}
+
+/* Friends */
+#ardzendaya-image {
+  max-width: 65vw;
+  border: 2px solid black;
+}
+
+@media only screen and (max-width: 700px) {
+  .cb {
+    width: 100%;
+  }
+  .cbc {
+    margin: 25vh 5vw 0 5vw;
+    margin-top: 15vh;
+  }
+  .navbox {
+    margin-top: 0;
+  }
+  .av {
+    width: 70vw;
+  }
+}
+
+/* Products */
+.product {
+  color: black;
+  display: flex;
+  margin: 0 10px;
+}
+
+.product-list-info {
+  display: flex;
+  width: 300px;
+}
+
+.product-list-image {
+  width: 300px;
+  height: 300px;
+}
+
+.product-name {
+  display: flex;
+  color: black;
+}
+
+.product-price {
+  display: flex;
+  color: blue;
+}
+
+.product-on-sale-text {
+  color: green;
+}
+
+.product-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-pagination-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.paginate-location {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination {
+  display: flex;
+	max-width: max-content;
+  gap: 10px;
+}
+
+.pagination a {
+  color: black;
+}
+
+.pagination a:hover {
+  opacity: 80%;
+  color: white;
+}
+
+.pagination .disabled {
+  color: red;
+}
+
+.pagination .current {
+  color: red !important;
+}
+
+/* Single product page */
+
+.product-content {
+  width: 700px;
+  max-width: 70vw;
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+}
+
+.sold-out {
+  color: red;
+}
+
+.product-image-choices {
+  display: flex;
+}
+
+.product-content-first-row {
+  display: flex;
+}
+
+.product-content-first-row {
+  display: flex;
+  gap: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+  .product-content-first-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+
+.product-text-content {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  max-width: 20vw;
+  color: black;
+}
+
+.product-image-choices li {
+  margin: 0 5px;
+}
+
+.primary_image {
+  width: 500px;
+  height: 500px;
+  max-width: 60vw;
+  max-height: 60vw;
+}
+
+/* Cart */
+.cart-url {
+  color: black;
+}
+
+a.remove {
+  color: black;
+  background: red !important;
+}
+
+/* Press */
+#press-image {
+  max-width: 65vw;
+  border: 2px solid #350b5f;
+}
+
+/* Friends */
+#ardzendaya-image {
+  max-width: 65vw;
+  border: 2px solid black;
+}
