@@ -1,31 +1,3 @@
-/* ------------------------------------------------------------------------------------------------
- *
- * This is where all of the CSS code is handled for your theme.
- *
- * We recommend you break your CSS into multiple files and put them in a separate
- * directory. We've used a "stylesheets" directory in our example below. After that we'll use
- * Sprockets (getsprockets.org) to package them into one file. Sprockets also allows you to
- * use Sass/SCSS (sass-lang.com) by ending your file name with .sass or .scss, and you can also
- * use LESS (lesscss.org) by ending your file with .less.
- *
- * However, if you don't have much CSS, or you're just a glutton for punishment,
- * you could simply put all of your CSS in this file. It's up to you.
- *
- * ------------------------------------------------------------------------------------------------
- */
-
-/*
- * Here we're including a 3rd-party stylesheet we put in stylesheets/vendor written in normal CSS,
- * as well as a few custom Sass stylesheets we've written for different areas of the store
- *
- *= require_directory ./stylesheets/vendor
- *= require stylesheets/layout
- *= require stylesheets/products
- *= require stylesheets/product
- *= require stylesheets/cart
- *
- */
-
 #chalkPressLogo {
   width: 40vw;
   right: 2%;
@@ -47,11 +19,14 @@
 body {
   background-image: url("https://github.com/jkulskis/chalk-press/blob/main/chalk/source/images/sidewalk_background.jpg?raw=true");
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  list-style-type: none;
 }
 
 /* gum splash screen / home */
@@ -97,7 +72,6 @@ body {
   left: 42%;
   transform: rotate(12deg);
 }
-
 
 #about-blob:hover {
   background-image: url("https://github.com/jkulskis/chalk-press/blob/main/chalk/source/images/gum/aboutpage_scroll.png?raw=true") !important;
@@ -193,10 +167,9 @@ div[type="gumBlob"] {
   }
 }
 
- 
 .navlink {
-	font-size: 2em;
-	font-weight: bold;
+  font-size: 2em;
+  font-weight: bold;
 }
 
 .navlink:link {
@@ -208,7 +181,7 @@ div[type="gumBlob"] {
 }
 
 .navlink:hover {
-	opacity: 80%;
+  opacity: 80%;
 }
 
 .navlink:active {
@@ -216,35 +189,35 @@ div[type="gumBlob"] {
 }
 
 .navbox {
-	background-color: black;	
-	display: inline-flex;
-	flex-direction: column;
-	align-items: center;
-	max-width: max-content;
+  background-color: black;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: max-content;
 }
 
 #navHome {
-	color: #e3f400;
+  color: #e3f400;
 }
 
 #navAbout {
-	color: #00e91a;
+  color: #00e91a;
 }
 
 #navShop {
-	color: #ff152f;
+  color: #ff152f;
 }
 
 #navPress {
-	color: #ffba4a;
+  color: #ffba4a;
 }
 
 #navArchive {
-	color: 	#04cfdf;
+  color: #04cfdf;
 }
 
 #navFriends {
-	color: 	#e7ffdf;
+  color: #e7ffdf;
 }
 
 /* General Content Pages */
@@ -297,7 +270,6 @@ div[type="gumBlob"] {
   align-items: center;
 }
 
-
 /* Archive Video */
 .av {
   width: 30vw;
@@ -330,8 +302,8 @@ div[type="gumBlob"] {
   .navbox {
     margin-top: 0;
   }
-  .av {
-    width: 70vw;
+  .product-content {
+    padding-left: 0;
   }
 }
 
@@ -352,6 +324,17 @@ div[type="gumBlob"] {
   height: 300px;
 }
 
+@media only screen and (max-width: 700px) {
+  .product-list-image {
+    max-width: 50vw;
+    max-height: 50vw;
+  }
+
+  .product-list-info {
+    max-width: 50vw;
+  }
+}
+
 .product-name {
   display: flex;
   color: black;
@@ -362,15 +345,19 @@ div[type="gumBlob"] {
   color: blue;
 }
 
+.product a {
+  text-decoration: none;
+}
+
 .product-on-sale-text {
   color: green;
 }
 
 .product-list {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 0;
 }
 
 .product-pagination-box {
@@ -386,7 +373,7 @@ div[type="gumBlob"] {
 
 .pagination {
   display: flex;
-	max-width: max-content;
+  max-width: max-content;
   gap: 10px;
 }
 
@@ -427,20 +414,33 @@ div[type="gumBlob"] {
 
 .product-content-first-row {
   display: flex;
-}
-
-.product-content-first-row {
-  display: flex;
   gap: 20px;
+  width: 80%;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 950px) {
+  .product-image-choices {
+    margin-bottom: 0;
+  }
+  .product-image-choice {
+    max-width: 16vw;
+    max-height: 16vw;
+  }
+  .product-content {
+    max-width: 50vw;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+    padding-left: 20px;
+  }
+  .product-content ul {
+    padding: 0;
+  }
   .product-content-first-row {
     flex-direction: column;
     gap: 0;
   }
 }
-
 
 .product-text-content {
   display: flex;
@@ -462,13 +462,36 @@ div[type="gumBlob"] {
 }
 
 /* Cart */
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  padding-left: 100px;
+}
+
+.cart ul {
+  padding: 0;
+}
+
 .cart-url {
   color: black;
+  text-decoration: none;
 }
 
 a.remove {
   color: black;
   background: red !important;
+}
+
+@media only screen and (max-width: 700px) {
+  .cart {
+    padding-left: 5vw;
+  }
+}
+
+#cartEmptyText {
+  color: red;
+  font-size: 4em;
 }
 
 /* Press */
