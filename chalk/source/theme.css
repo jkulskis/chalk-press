@@ -9,8 +9,8 @@
 
 @media only screen and (max-width: 700px) {
   #chalkPressLogo {
-    width: 70vw;
-    height: 15vh;
+    width: 60vw;
+    height: 5vh;
     top: 1%;
     rotate: 0deg;
   }
@@ -251,27 +251,43 @@ div[type="gumBlob"] {
 
 .sidebar-cart {
   background-color: black;
+  max-width: min-content;
 }
 
 .sidebar-cart a {
   color: rgb(255, 208, 0);
 }
 
+#cartGif {
+  max-width: 150px;
+}
+
 .sidebar-sotd {
+  display: flex;
+  flex-direction: column;
   background-color: black;
+  align-items: center;
+  max-height: min-content;
+}
+
+.sidebar-sotd #sotdGif {
+  max-width: 150px;
 }
 
 .sidebar-sotd #sotd {
-  color: rgb(255, 208, 0);
+  font-size: 1.1em;
+  font-weight: bold;
+  color: rgb(205, 22, 157);
+  padding: 0 20px;
 }
 
 .navbox {
   margin-top: 15vh;
+  padding: 0 15px;
 }
 
 .songbox {
   display: flex;
-  font-size: 1.5em;
   color: green;
   font-weight: bold;
   background-color: gray;

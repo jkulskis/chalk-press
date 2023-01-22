@@ -39,13 +39,23 @@
           <a class="navlink" href="/archive" id="navArchive"> Archive </a>
           <a class="navlink" href="/friends" id="navFriends"> Friends </a>
           <p>{{data: "%s%N"}}</p>
-        </div>
-        <div class="sidebar-cart">
-          <a class="navlink" href="/cart">Cart ({{ cart.total | money_with_sign }})</a>
+          <div class="sidebar-cart">
+            <a class="navlink" href="/cart">
+              <!-- Cart ({{ cart.total | money_with_sign }})</a> -->
+              <img
+                id="cartGif"
+                src="https://github.com/jkulskis/chalk-press/blob/main/chalk/source/images/cart.gif?raw=true"
+                alt="CART"
+              />
+            </a>
+          </div>
         </div>
         <div class="sidebar-sotd">
-          <img src="https://github.com/jkulskis/chalk-press/blob/main/chalk/source/images/enjoyer_of_music.gif" alt="Enjoyer of Music">
-          <p>Song of the Day:</p>
+          <img
+            id="sotdGif"
+            src="https://github.com/jkulskis/chalk-press/blob/main/chalk/source/images/enjoyer_of_music.gif?raw=true"
+            alt="Enjoyer of Music"
+          />
           <div id="sotd"></div>
         </div>
       </div>
@@ -76,4 +86,5 @@
     let [song_name, artist_name] = [song_and_artist_name[0].trim(), song_and_artist_name[1].trim()];
     document.getElementById("sotd").innerHTML = `${song_name} by ${artist_name}`;
   });
+  if ($("#sotd").text() == "") document.getElementById("sotd").innerHTML = `Sudehead by Morrissey`;
 </script>
