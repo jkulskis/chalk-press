@@ -247,11 +247,13 @@ div[type="gumBlob"] {
   flex-direction: column;
   gap: 3vh;
   max-width: min-content;
+  margin-right: 2vw;
 }
 
 .sidebar-cart {
   background-color: black;
   max-width: min-content;
+  position: relative;
 }
 
 .sidebar-cart a {
@@ -259,7 +261,16 @@ div[type="gumBlob"] {
 }
 
 #cartGif {
-  max-width: 150px;
+  max-width: 110px;
+}
+
+#cartItemCount {
+  font-size: 0.5em;
+  color: rgb(255, 255, 164);
+  position: absolute;
+  left: 50%;                        /* horizontal alignment */
+  top: 45%;                         /* vertical alignment */
+  transform: translate(-50%, -50%); /* precise centering; see link below */
 }
 
 .sidebar-sotd {
@@ -278,7 +289,7 @@ div[type="gumBlob"] {
   font-size: 1.1em;
   font-weight: bold;
   color: rgb(205, 22, 157);
-  padding: 0 20px;
+  padding: 0 20px 10px 20px;
 }
 
 .navbox {
@@ -320,7 +331,7 @@ div[type="gumBlob"] {
     width: 100%;
   }
   .cbc {
-    margin: 25vh 5vw 0 5vw;
+    margin: 25vh 5vw 0 0;
     margin-top: 15vh;
   }
   .navbox {
@@ -528,4 +539,9 @@ a.remove {
 #ardzendaya-image {
   max-width: 65vw;
   border: 2px solid black;
+}
+
+/* About */
+#aboutContent {
+  color: black;
 }

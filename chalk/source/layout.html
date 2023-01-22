@@ -39,16 +39,17 @@
           <a class="navlink" href="/archive" id="navArchive"> Archive </a>
           <a class="navlink" href="/friends" id="navFriends"> Friends </a>
           <p>{{data: "%s%N"}}</p>
-          <div class="sidebar-cart">
-            <a class="navlink" href="/cart">
+            <a class="sidebar-cart navlink" href="/cart">
               <!-- Cart ({{ cart.total | money_with_sign }})</a> -->
               <img
                 id="cartGif"
                 src="https://github.com/jkulskis/chalk-press/blob/main/chalk/source/images/cart.gif?raw=true"
                 alt="CART"
               />
+              <div id="cartItemCount">
+                {{ cart.item_count }}
+              </div>
             </a>
-          </div>
         </div>
         <div class="sidebar-sotd">
           <img
