@@ -257,6 +257,14 @@ div[type="gumBlob"] {
   color: rgb(255, 208, 0);
 }
 
+.sidebar-sotd {
+  background-color: black;
+}
+
+.sidebar-sotd #sotd {
+  color: rgb(255, 208, 0);
+}
+
 .navbox {
   margin-top: 15vh;
 }

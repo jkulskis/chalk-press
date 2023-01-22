@@ -16,15 +16,20 @@
   </head>
 
   <body id="{{ page.permalink }}" class="{{ page.category }}">
-      <a href="/" title="{{ store.name | escape }}">
-        {% if theme.logo != blank %}
-        <img id="chalkPressLogo" src="{{ theme.logo.url }}" alt="{{ store.name }}" />
-        {% else %}
-        <img id="chalkPressLogo" src="https://github.com/jkulskis/chalk-press/blob/main/chalk/source/images/logos/concrete_logo.png?raw=true" alt="{{ store.name }}" />
-        {% endif %}
-      </a>
-    {% if page.name != 'Home' %}
+    <a href="/" title="{{ store.name | escape }}">
+      {% if theme.logo != blank %}
+      <img id="chalkPressLogo" src="{{ theme.logo.url }}" alt="{{ store.name }}" />
+      {% else %}
+      <img
+        id="chalkPressLogo"
+        src="https://github.com/jkulskis/chalk-press/blob/main/chalk/source/images/logos/concrete_logo.png?raw=true"
+        alt="{{ store.name }}"
+      />
+      {% endif %}
+    </a>
     <div class="cb">
+      {% if page.name != 'Home' %}
+      <div id="content"></div>
       <div class="sidebar">
         <div class="navbox">
           <a class="navlink" href="/" id="navHome"> Home </a>
@@ -33,9 +38,15 @@
           <a class="navlink" href="/press" id="navPress"> Press </a>
           <a class="navlink" href="/archive" id="navArchive"> Archive </a>
           <a class="navlink" href="/friends" id="navFriends"> Friends </a>
+          <p>{{data: "%s%N"}}</p>
         </div>
         <div class="sidebar-cart">
           <a class="navlink" href="/cart">Cart ({{ cart.total | money_with_sign }})</a>
+        </div>
+        <div class="sidebar-sotd">
+          <img src="https://github.com/jkulskis/chalk-press/blob/main/chalk/source/images/enjoyer_of_music.gif" alt="Enjoyer of Music">
+          <p>Song of the Day:</p>
+          <div id="sotd"></div>
         </div>
       </div>
       {% endif %}
@@ -54,3 +65,15 @@
     </div>
   </body>
 </html>
+
+<script>
+  $.get("sotd.html", function (sotd_content) {
+    const sotds = sotd_content.split("\n");
+    const date = new Date();
+    const sotd_index = (date.getFullYear() * (date.getDate() + 1) * (date.getMonth() + 1)) % sotds.length;
+    const sotd = sotds[sotd_index];
+    song_and_artist_name = sotd.split(",");
+    let [song_name, artist_name] = [song_and_artist_name[0].trim(), song_and_artist_name[1].trim()];
+    document.getElementById("sotd").innerHTML = `${song_name} by ${artist_name}`;
+  });
+</script>
