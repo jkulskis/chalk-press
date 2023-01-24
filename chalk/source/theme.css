@@ -9,9 +9,9 @@
   filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black);
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
   #chalkPressLogo {
-    width: 60vw;
+    width: 50vw;
     height: 5vh;
     top: 1%;
     rotate: 0deg;
@@ -125,7 +125,7 @@ div[type="gumBlob"] {
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
   div[type="gumBlob"] {
     width: 20vmax !important;
     height: 20vmax !important;
@@ -327,7 +327,7 @@ div[type="gumBlob"] {
   border: 2px solid black;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
   .cb {
     width: 100%;
   }
@@ -340,6 +340,10 @@ div[type="gumBlob"] {
   }
   .product-content {
     padding-left: 0;
+  }
+  .product_images img {
+    max-width: 45vw;
+    max-height: 45vw;
   }
 }
 
@@ -360,7 +364,11 @@ div[type="gumBlob"] {
   height: 300px;
 }
 
-@media only screen and (max-width: 700px) {
+.product-description {
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 600px) {
   .product-list-image {
     max-width: 50vw;
     max-height: 50vw;
@@ -463,7 +471,7 @@ div[type="gumBlob"] {
     max-height: 16vw;
   }
   .product-content {
-    max-width: 50vw;
+    max-width: 40vw;
     display: flex;
     flex-direction: column;
     margin: 50px 0;
@@ -531,15 +539,29 @@ a.remove {
 }
 
 /* Archive */
+
+#archiveContent {
+  color: #463a26;
+  font-weight: 900;
+}
+
 #archiveBigFoot {
   width: 40vw;
   max-height: 60vh;
 }
 
 /* Press */
-#press-image {
-  max-width: 65vw;
-  border: 2px solid #350b5f;
+#pressContent {
+  display: flex;
+  margin-left: 10vw;
+}
+
+.lookbook-gallery-image {
+  max-width: 40vw;
+}
+
+.slideshow-button {
+  padding: 15px;
 }
 
 /* Friends */
@@ -563,9 +585,4 @@ a.remove {
 /* About */
 #aboutContent {
   color: black;
-}
-
-/* Press */
-#pressContent {
-  display: flex;
 }
