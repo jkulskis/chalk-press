@@ -532,6 +532,7 @@ a.remove {
 /* Archive */
 #archiveBigFoot {
   width: 40vw;
+  max-height:60vh;
 }
 
 /* Press */
@@ -541,9 +542,21 @@ a.remove {
 }
 
 /* Friends */
-#ardzendaya-image {
-  max-width: 65vw;
-  border: 2px solid black;
+#friendsContent {
+  display: flex;
+  flex-direction: column;
+}
+
+#friendsContent div a {
+  color: inherit;
+}
+
+#friendsContent div:nth-of-type(odd) {
+  color: red;
+}
+
+#friendsContent div:nth-of-type(3n) {
+  color: black;
 }
 
 /* About */
