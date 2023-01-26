@@ -12,18 +12,16 @@
           <em>{{ item.option.name }}</em>
           {% endunless %}
         </a>
-        <p>
-          {{ item | item_quantity_input }} {{ item.price | money_with_sign }}
+        <div class="cart-item-info">
+          {{ item | item_quantity_input }} <span class="cart-item-price">{{ item.price | money_with_sign }}</span>
           <a href="#" class="remove">&times;</a>
-        </p>
+        </div>
       </li>
       {% endfor %}
     </ul>
 
-    <p>
-      <strong>Subtotal</strong>
-      <span>{{ cart.subtotal | money_with_sign }}</span>
-    </p>
+    <span class="cart-subtotal"> Subtotal {{ cart.subtotal | money_with_sign }} </span>
+    <br />
     <button type="submit" name="checkout" title="Checkout">Checkout</button>
   </form>
 

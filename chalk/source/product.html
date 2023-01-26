@@ -32,7 +32,7 @@
             <!-- <p>Availability</p> -->
 
               {% for option in product.options %}
-              {% unless product.has_default_option %}<span>{{ option.name }}</span>{% endunless %}
+              {% unless product.has_default_option %}<span class="product-option"">{{ option.name }}</span>{% endunless %}
               <span>{% if option.sold_out %}<p class="sold-out">Sold Out</p>{% endif %}</span>
               <!-- <p>Inventory: {{ option.inventory }}</p> -->
               {% endfor %}
