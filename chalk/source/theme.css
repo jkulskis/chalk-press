@@ -390,11 +390,15 @@ div[type="gumBlob"] {
 .product-name {
   display: flex;
   color: black;
+  margin-bottom: 1.5vh;
+  background-color: #d1d5d6;
 }
 
 .product-price {
   display: flex;
   color: blue;
+  margin-bottom: 2vh;
+  background-color: #d1d5d6;
 }
 
 .product a {
