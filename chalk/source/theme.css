@@ -5,8 +5,15 @@
   position: absolute;
   rotate: 10deg;
   /* filter: drop-shadow(0 0 0 #350b5f); */
-  -webkit-filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black);
-  filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black);
+  -webkit-filter: drop-shadow(2px 2px 0 black) drop-shadow(-2px -2px 0 black);
+  filter: drop-shadow(2px 2px 0 black) drop-shadow(-2px -2px 0 black);
+}
+
+@media only screen and (max-width: 600px) {
+  #chalkPressLogo {
+    -webkit-filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black);
+    filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black);
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -319,12 +326,6 @@ div[type="gumBlob"] {
   margin: 0 auto;
 }
 
-/* Press */
-#press-image {
-  max-width: 65vw;
-  border: 2px solid #350b5f;
-}
-
 /* Friends */
 #ardzendaya-image {
   max-width: 65vw;
@@ -336,8 +337,7 @@ div[type="gumBlob"] {
     width: 100%;
   }
   .cbc {
-    margin: 25vh 5vw 0 0;
-    margin-top: 15vh;
+    margin: 5vh 5vw 0 0;
   }
   .navbox {
     margin-top: 0;
@@ -384,6 +384,11 @@ div[type="gumBlob"] {
 
   .product-list-info {
     max-width: 50vw;
+  }
+  .product-description {
+    position: absolute;
+    left: 0;
+    margin: 0 2vw;
   }
 }
 
@@ -553,7 +558,7 @@ a.remove {
   background: red !important;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
   .cart {
     padding-left: 5vw;
   }
@@ -580,10 +585,22 @@ a.remove {
   max-height: 60vh;
 }
 
+@media only screen and (max-width: 600px) {
+  #archiveBigFoot {
+    margin-top: 5vh;
+  }
+}
+
 /* Press */
 #pressContent {
   display: flex;
   margin-left: 10vw;
+}
+
+@media only screen and (max-width: 600px) {
+  #pressContent {
+    margin-top: 5vh;
+  }
 }
 
 .lookbook-gallery-image {
@@ -613,6 +630,12 @@ a.remove {
   display: flex;
   flex-direction: column;
   gap: 2vh;
+}
+
+@media only screen and (max-width: 600px) {
+  #friendsContent {
+    margin-top: 5vh;
+  }
 }
 
 .friend a {

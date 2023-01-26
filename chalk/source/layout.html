@@ -82,48 +82,47 @@
 </html>
 
 <script>
-  let playPauseButton = document.getElementById("playPauseButton");
-  let curr_track = document.createElement("audio");
-  let isPlaying = false;
-
-  function playPauseTrack() {
-    // Switch between playing and pausing
-    // depending on the current state
-    document.removeEventListener("click", playPauseTrack);
-    if (!isPlaying) playTrack();
-    else pauseTrack();
-  }
-
-  function playTrack() {
-    // Play the loaded track
-    curr_track.play();
-    isPlaying = true;
-
-    // Replace icon with the pause icon
-    playPauseButton.innerHTML = "⏸️";
-  }
-
-  function pauseTrack() {
-    // Pause the loaded track
-    curr_track.pause();
-    isPlaying = false;
-
-    // Replace icon with the play icon
-    playPauseButton.innerHTML = "▶️";
-  }
-  document.addEventListener("click", playPauseTrack);
-
   if (window.location.pathname !== "/") {
+    let playPauseButton = document.getElementById("playPauseButton");
+    let curr_track = document.createElement("audio");
+    let isPlaying = false;
+
+    function playPauseTrack() {
+      // Switch between playing and pausing
+      // depending on the current state
+      document.removeEventListener("click", playPauseTrack);
+      if (!isPlaying) playTrack();
+      else pauseTrack();
+    }
+
+    function playTrack() {
+      // Play the loaded track
+      curr_track.play();
+      isPlaying = true;
+
+      // Replace icon with the pause icon
+      playPauseButton.innerHTML = "⏸️";
+    }
+
+    function pauseTrack() {
+      // Pause the loaded track
+      curr_track.pause();
+      isPlaying = false;
+
+      // Replace icon with the play icon
+      playPauseButton.innerHTML = "▶️";
+    }
+    document.addEventListener("click", playPauseTrack);
+
     $.get("sotd.html", function (sotd_content) {
       const sotds = sotd_content.split("\n");
       const date = new Date();
       const sotd_index = (date.getFullYear() * (date.getDate() + 1) * (date.getMonth() + 1)) % sotds.length;
       const sotd = sotds[sotd_index];
-      song_and_artist_name = sotd.split(",");
+      let song_info = sotd.split(",");
       let [song_name, artist_name, mp3_link] = [song_info[0].trim(), song_info[1].trim(), song_info[2].trim()];
       curr_track.src = mp3_link;
       curr_track.load();
-      song_mp3 = mp3_link;
       document.getElementById("sotd").innerHTML = `${song_name} by ${artist_name}`;
     });
     if ($("#sotd").text() == "") document.getElementById("sotd").innerHTML = `Sudehead by Morrissey`;
