@@ -29,12 +29,10 @@
 
           {% when 'active' %}
             <p>{{ product.default_price | money_with_sign }}{% if product.on_sale %} <em><br>On Sale{% endif %}</em></p>
-            <!-- <p>Availability</p> -->
 
               {% for option in product.options %}
               {% unless product.has_default_option %}<span class="product-option"">{{ option.name }}</span>{% endunless %}
               <span>{% if option.sold_out %}<p class="sold-out">Sold Out</p>{% endif %}</span>
-              <!-- <p>Inventory: {{ option.inventory }}</p> -->
               {% endfor %}
 
             <form method="post" action="/cart">
@@ -63,6 +61,10 @@
 
     </div>
   </div>
+  {% if product.has_default_option %}
+  <div class="product-space-block">
+  </div>
+  {% endif %}
   <div class="product-content-second-row">
     <div class="product-description">
       {% if product.description != blank %}

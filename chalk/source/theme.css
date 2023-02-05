@@ -9,6 +9,7 @@
   filter: drop-shadow(2px 2px 0 black) drop-shadow(-2px -2px 0 black);
 }
 
+
 @media only screen and (max-width: 600px) {
   #chalkPressLogo {
     -webkit-filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black);
@@ -27,6 +28,7 @@
 
 body {
   background-image: url("https://github.com/jkulskis/chalk-press/blob/main/chalk/source/images/sidewalk_background.jpg?raw=true");
+  cursor: url("https://github.com/jkulskis/chalk-press/blob/main/chalk/source/images/chalk_cursor.png?raw=true"), auto;
   margin: 0;
   font-family: Courier;
   -webkit-font-smoothing: antialiased;
@@ -389,6 +391,9 @@ div[type="gumBlob"] {
     position: absolute;
     left: 0;
     margin: 0 2vw;
+  }
+  .product-space-block {
+    height: 8vh;
   }
 }
 
