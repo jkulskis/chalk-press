@@ -1,0 +1,690 @@
+#chalkPressLogo {
+  width: 40vw;
+  right: 2%;
+  top: 10%;
+  position: absolute;
+  rotate: 10deg;
+  /* filter: drop-shadow(0 0 0 #350b5f); */
+  -webkit-filter: drop-shadow(2px 2px 0 black) drop-shadow(-2px -2px 0 black);
+  filter: drop-shadow(2px 2px 0 black) drop-shadow(-2px -2px 0 black);
+}
+
+
+@media only screen and (max-width: 600px) {
+  #chalkPressLogo {
+    -webkit-filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black);
+    filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #chalkPressLogo {
+    width: 50vw;
+    height: 5vh;
+    top: 1%;
+    rotate: 0deg;
+  }
+}
+
+body {
+  background-image: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/sidewalk_background.jpg?raw=true");
+  margin: 0;
+  font-family: Courier;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  cursor: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/chalk_cursor.png?raw=true"), auto !important;
+}
+
+a:hover, button:hover, select:hover {
+  /* Different color thread for hovering over clickables */
+  cursor: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/chalk_cursor.png?raw=true"), auto !important;
+}
+
+p {
+  background-color: #d1d5d6;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* gum splash screen / home */
+
+#about-blob {
+  background-image: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/gum/aboutpage_noscroll.png?raw=true");
+  top: 5%;
+  left: 6%;
+  transform: rotate(-15deg);
+}
+
+#friends-blob {
+  background-image: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/gum/palspage_noscroll.png?raw=true");
+  top: 32%;
+  left: 60%;
+  transform: rotate(10deg);
+}
+
+#home-blob {
+  background-image: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/gum/homepage_noscroll.png?raw=true");
+  top: 47%;
+  left: 45%;
+  transform: rotate(-30deg);
+}
+
+#press-blob {
+  background-image: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/gum/presspage_noscroll.png?raw=true");
+  top: 27%;
+  left: 30%;
+  transform: rotate(22deg);
+}
+
+#shop-blob {
+  background-image: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/gum/shop_noscroll.png?raw=true");
+  top: 47%;
+  left: 6%;
+  transform: rotate(-4deg);
+}
+
+#archive-blob {
+  background-image: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/gum/archivepage_noscroll.png?raw=true");
+  top: 5%;
+  left: 42%;
+  transform: rotate(12deg);
+}
+
+#about-blob:hover {
+  background-image: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/gum/aboutpage_scroll.png?raw=true") !important;
+}
+
+#friends-blob:hover {
+  background-image: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/gum/palspage_scroll.png?raw=true") !important;
+}
+
+#home-blob:hover {
+  background-image: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/gum/homepage_scroll.png?raw=true") !important;
+}
+
+#press-blob:hover {
+  background-image: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/gum/presspage_scroll.png?raw=true") !important;
+}
+
+#shop-blob:hover {
+  background-image: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/gum/shop_scroll.png?raw=true") !important;
+}
+
+#archive-blob:hover {
+  background-image: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/gum/archivepage_scroll.png?raw=true") !important;
+}
+
+div[type="gumBlob"]:hover {
+  z-index: 0 !important;
+}
+
+div[type="gumBlob"] {
+  width: 15vmax;
+  height: 15vmax;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 130%;
+  background-position: center;
+}
+
+@media only screen and (max-width: 1300px) {
+  div[type="gumBlob"] {
+    width: 23vmax !important;
+    height: 23vmax !important;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  div[type="gumBlob"] {
+    width: 22vmax !important;
+    height: 22vmax !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  div[type="gumBlob"] {
+    width: 20vmax !important;
+    height: 20vmax !important;
+  }
+
+  div[type="gumBlob"]:hover {
+    background-size: 140% !important;
+    z-index: 4 !important;
+  }
+
+  /* On mobile always display the scroll version of the gum image */
+  #about-blob {
+    background-image: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/gum/aboutpage_scroll.png?raw=true") !important;
+    top: 25% !important;
+  }
+
+  #friends-blob {
+    background-image: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/gum/palspage_scroll.png?raw=true") !important;
+    top: 52% !important;
+  }
+
+  #home-blob {
+    background-image: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/gum/homepage_scroll.png?raw=true") !important;
+    top: 67% !important;
+  }
+
+  #press-blob {
+    background-image: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/gum/presspage_scroll.png?raw=true") !important;
+    top: 47% !important;
+  }
+
+  #shop-blob {
+    background-image: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/gum/shop_scroll.png?raw=true") !important;
+    top: 67% !important;
+  }
+
+  #archive-blob {
+    background-image: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/gum/archivepage_scroll.png?raw=true") !important;
+    top: 25% !important;
+  }
+}
+
+.navlink {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.navlink:link {
+  text-decoration: none;
+}
+
+.navlink:visited {
+  text-decoration: none;
+}
+
+.navlink:hover {
+  opacity: 80%;
+}
+
+.navlink:active {
+  text-decoration: none;
+}
+
+.navbox {
+  background-color: black;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: max-content;
+}
+
+#navHome {
+  color: #e3f400;
+}
+
+#navAbout {
+  color: #00e91a;
+}
+
+#navShop {
+  color: #ff152f;
+}
+
+#navPress {
+  color: #ffba4a;
+}
+
+#navArchive {
+  color: #04cfdf;
+}
+
+#navFriends {
+  color: #e7ffdf;
+}
+
+/* General Content Pages */
+
+/* content box */
+.cb {
+  width: 70vw;
+  margin: auto;
+  display: flex;
+}
+
+/* content box children div */
+
+.cbc {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 20vh;
+  font-weight: bold;
+  color: #2784ba;
+  font-size: 1.5em;
+  /* margin: 20vh 15vw 0 15vw; */
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  max-width: min-content;
+  margin-right: 2vw;
+}
+
+.sidebar-cart {
+  background-color: black;
+  max-width: min-content;
+  position: relative;
+}
+
+.sidebar-cart a {
+  color: rgb(255, 208, 0);
+}
+
+#cartGif {
+  max-width: 110px;
+}
+
+#cartItemCount {
+  font-size: 0.5em;
+  color: rgb(255, 255, 164);
+  position: absolute;
+  left: 50%; /* horizontal alignment */
+  top: 45%; /* vertical alignment */
+  transform: translate(-50%, -50%); /* precise centering; see link below */
+}
+
+.sidebar-sotd {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  align-items: center;
+  max-height: min-content;
+}
+
+.sidebar-sotd #sotdGif {
+  max-width: 150px;
+}
+
+.sidebar-sotd #sotd {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: rgb(205, 22, 157);
+  padding: 0 20px 10px 20px;
+}
+
+.navbox {
+  margin-top: 15vh;
+  padding: 0 15px;
+}
+
+.songbox {
+  display: flex;
+  color: green;
+  font-weight: bold;
+  background-color: gray;
+  align-items: center;
+}
+
+/* Archive Video */
+.av {
+  width: 30vw;
+  height: 30vh;
+  display: block;
+  border: 2px solid red;
+  margin: 0 auto;
+}
+
+/* Friends */
+#ardzendaya-image {
+  max-width: 65vw;
+  border: 2px solid black;
+}
+
+@media only screen and (max-width: 600px) {
+  .cb {
+    width: 100%;
+  }
+  .cbc {
+    margin: 5vh 5vw 0 0;
+  }
+  .navbox {
+    margin-top: 0;
+  }
+  .product-content {
+    padding-left: 0;
+  }
+  .product_images img {
+    max-width: 45vw;
+    max-height: 45vw;
+  }
+}
+
+/* Products */
+.product {
+  color: black;
+  display: flex;
+  margin: 0 10px;
+}
+
+.product-option {
+  background-color: #d1d5d6;
+}
+
+.product-list-info {
+  display: flex;
+  width: 300px;
+}
+
+.product-list-image {
+  width: 300px;
+  height: 300px;
+}
+
+.product-description {
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 600px) {
+  .product-list-image {
+    max-width: 50vw;
+    max-height: 50vw;
+  }
+
+  .product-list-info {
+    max-width: 50vw;
+  }
+  .product-description {
+    position: absolute;
+    left: 0;
+    margin: 0 2vw;
+  }
+  .product-space-block {
+    height: 8vh;
+  }
+}
+
+.product-name {
+  display: flex;
+  color: black;
+  margin-bottom: 1.5vh;
+  background-color: #d1d5d6;
+}
+
+.product-price {
+  display: flex;
+  color: blue;
+  margin-bottom: 2vh;
+  background-color: #d1d5d6;
+}
+
+.product a {
+  text-decoration: none;
+}
+
+.product-on-sale-text {
+  color: green;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+
+.product-pagination-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.paginate-location {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination {
+  display: flex;
+  max-width: max-content;
+  gap: 10px;
+}
+
+.pagination a {
+  color: black;
+}
+
+.pagination a:hover {
+  opacity: 80%;
+  color: white;
+}
+
+.pagination .disabled {
+  color: red;
+}
+
+.pagination .current {
+  color: red !important;
+}
+
+/* Single product page */
+
+.product-content {
+  width: 700px;
+  max-width: 70vw;
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+}
+
+.sold-out {
+  color: red;
+}
+
+.product-image-choices {
+  display: flex;
+}
+
+.product-content-first-row {
+  display: flex;
+  gap: 20px;
+  width: 80%;
+}
+
+@media only screen and (max-width: 950px) {
+  .product-image-choices {
+    margin-bottom: 0;
+  }
+  .product-image-choice {
+    max-width: 16vw;
+    max-height: 16vw;
+  }
+  .product-content {
+    max-width: 40vw;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+    padding-left: 20px;
+  }
+  .product-content ul {
+    padding: 0;
+  }
+  .product-content-first-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.product-text-content {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  max-width: 20vw;
+  color: black;
+}
+
+.product-image-choices li {
+  margin: 0 5px;
+}
+
+.primary_image {
+  width: 500px;
+  height: 500px;
+  max-width: 60vw;
+  max-height: 60vw;
+}
+
+/* Cart */
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  padding-left: 100px;
+}
+
+.cart ul {
+  padding: 0;
+}
+
+.cart-item-info {
+  margin: 1vh 0 3vh 0;
+}
+
+.cart-item-price {
+  background-color: #d1d5d6;
+}
+
+.cart-subtotal {
+  background-color: #d1d5d6;
+  color: rgb(16, 138, 16);
+  margin: 3vh 0;
+}
+
+.cart-url {
+  color: black;
+  text-decoration: none;
+}
+
+a.remove {
+  color: black;
+  background: red !important;
+  text-decoration: none;
+}
+
+a.remove:hover {
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .cart {
+    padding-left: 5vw;
+  }
+
+  .cart-list li p {
+    background-color: transparent;
+  }
+}
+
+#cartEmptyText {
+  color: red;
+  font-size: 4em;
+}
+
+/* Archive */
+
+#archiveContent {
+  color: #463a26;
+  font-weight: 900;
+}
+
+#archiveBigFoot {
+  width: 40vw;
+  max-height: 60vh;
+}
+
+@media only screen and (max-width: 600px) {
+  #archiveBigFoot {
+    margin-top: 5vh;
+  }
+}
+
+/* Press */
+#pressContent {
+  display: flex;
+  margin-left: 10vw;
+}
+
+@media only screen and (max-width: 600px) {
+  #pressContent {
+    margin-top: 5vh;
+  }
+}
+
+.lookbook-gallery-image {
+  max-width: 40vw;
+}
+
+.slideshow-button {
+  padding: 1.5vw;
+}
+
+@media only screen and (max-width: 600px) {
+  #pressContent {
+    display: flex;
+    margin-left: 2vw;
+    flex-direction: column;
+  }
+  .slideshow-button {
+    padding: 5vw;
+  }
+  .lookbook-gallery-image {
+    max-width: 55vw;
+  }
+}
+
+/* Friends */
+#friendsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+@media only screen and (max-width: 600px) {
+  #friendsContent {
+    margin-top: 5vh;
+  }
+}
+
+.friend a {
+  background-color: #d1d5d6;
+}
+
+#friendsContent div a {
+  color: inherit;
+}
+
+#friendsContent div:nth-of-type(odd) {
+  color: red;
+}
+
+#friendsContent div:nth-of-type(3n) {
+  color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  .friend {
+    width: 50vw;
+  }
+}
+
+/* About */
+#aboutContent {
+  color: black;
+}
+
+/* Bigcartel theme defaults */
+.header-nav-container {
+  /* Need this component for theme js to run (which we can't edit) */
+  display: none !important;
+}

@@ -1,0 +1,75 @@
+<div class="product-content">
+  <div class="product-content-first-row">
+    <section class="product_images">
+      <img src="{{ product.image | product_image_url }}" alt="Image of {{ product.name | escape }}" class="primary_image">
+
+      {% if product.images.size > 1 %}
+      <ul class="unstyled product-image-choices">
+        {% for image in product.images %}
+        <li{% if forloop.first %} class="selected"{% endif %}>
+          <a href="{{ image | product_image_url }}">
+            <img src="{{ image | product_image_url size:"thumb" }}" class="product-image-choice" alt="Image of {{ product.name | escape }}">
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </section>
+
+    <div class="product-text-content">
+        {% case product.status %}
+
+          {% when 'sold-out' %}
+          <div class="sold-out"
+            <h5>{{ product.default_price | money_with_sign }} <em><br>Sold Out</em></h5>
+          </div>
+
+          {% when 'coming-soon' %}
+            <h5>{{ product.default_price | money_with_sign }} <em><br>Coming Soon</em></h5>
+
+          {% when 'active' %}
+            <p>{{ product.default_price | money_with_sign }}{% if product.on_sale %} <em><br>On Sale{% endif %}</em></p>
+
+              {% for option in product.options %}
+              {% unless product.has_default_option %}<span class="product-option"">{{ option.name }}</span>{% endunless %}
+              <span>{% if option.sold_out %}<p class="sold-out">Sold Out</p>{% endif %}</span>
+              {% endfor %}
+
+            <form method="post" action="/cart">
+              {% if product.has_default_option %}
+              {{ product.option | hidden_option_input }}
+              {% else %}
+              <div>
+              {{ product.options_in_stock | options_select }}
+              </div>
+              {% endif %}
+
+              <button name="submit" type="submit" title="Add to Cart">Add to Cart</button>
+            </form>
+        {% endcase %}
+
+      {% for artist in product.artists %}
+        {% if forloop.first %}
+          <h5>by {{ artist.name }}</h5>
+          {% if forloop.length > 2 %}, {% endif %}
+        {% elsif forloop.last %}
+          <h5>and {{ artist.name }}</h5>
+        {% else %}
+          <h5>{{ artist.name }}</h5>,
+        {% endif %}
+      {% endfor %}
+
+    </div>
+  </div>
+  {% if product.has_default_option %}
+  <div class="product-space-block">
+  </div>
+  {% endif %}
+  <div class="product-content-second-row">
+    <div class="product-description">
+      {% if product.description != blank %}
+        {{ product.description | paragraphs }}
+      {% endif %}
+    </div>
+  </div>
+</div>
