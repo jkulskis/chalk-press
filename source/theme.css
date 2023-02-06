@@ -40,7 +40,7 @@ body {
 
 a:hover, button:hover, select:hover {
   /* Different color thread for hovering over clickables */
-  cursor: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/chalk_cursor.png?raw=true"), auto !important;
+  cursor: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/chalk_cursor_scrollover.png?raw=true"), auto !important;
 }
 
 p {
