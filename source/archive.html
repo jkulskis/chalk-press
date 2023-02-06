@@ -1,8 +1,15 @@
 <div id="archiveContent">
-  <img
-    id="archiveBigFoot"
-    src="https://github.com/jkulskis/chalk-press/blob/main/source/images/bigfoot.gif?raw=true"
-    alt=""
-  />
-  <span><br />Coming soon.......................</span>
+  {% if theme.image_sets.lookbook_images.size > 0 %}
+  <button id="slideShowPrevious" class="slideshow-button">&#10094;</button>
+  <div class="lookbook-gallery">
+    {% for image in theme.image_sets.lookbook_images %}
+    <img
+      alt=""
+      class="lazy lookbook-gallery-image"
+      src="{{ image.url | constrain: '800','' }}"
+    />
+    {% endfor %}
+  </div>
+  <button id="slideShowNext" class="slideshow-button">&#10095;</button>
+  {% endif %}
 </div>

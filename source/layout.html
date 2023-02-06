@@ -86,17 +86,9 @@
 
 <script>
   if (window.location.pathname !== "/") {
-    let playPauseButton = document.getElementById("playPauseButton");
-    let curr_track = document.createElement("audio");
-    let isPlaying = false;
-
-    function playPauseTrack() {
-      // Switch between playing and pausing
-      // depending on the current state
-      document.removeEventListener("click", playPauseTrack);
-      if (!isPlaying) playTrack();
-      else pauseTrack();
-    }
+    var playPauseButton = document.getElementById("playPauseButton");
+    var curr_track = document.createElement("audio");
+    var isPlaying = false;
 
     function playTrack() {
       // Play the loaded track
@@ -115,6 +107,15 @@
       // Replace icon with the play icon
       playPauseButton.innerHTML = "▶️";
     }
+
+    function playPauseTrack() {
+      // Switch between playing and pausing
+      // depending on the current state
+      document.removeEventListener("click", playPauseTrack);
+      if (!isPlaying) playTrack();
+      else pauseTrack();
+    }
+
     document.addEventListener("click", playPauseTrack);
 
     $.get("/sotd.html", function (sotd_content) {
@@ -132,7 +133,7 @@
     document.getElementById("playPauseButton").addEventListener("click", playPauseTrack, false);
   }
 
-  if (window.location.pathname == "/press") {
+  if (window.location.pathname == "/archive") {
     var slideIndex = 0;
 
     showSlide(slideIndex);

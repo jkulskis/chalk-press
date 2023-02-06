@@ -38,7 +38,7 @@ body {
   cursor: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/chalk_cursor.png?raw=true"), auto !important;
 }
 
-a:hover, button:hover, select:hover {
+a:hover, button:hover, select:hover, .product-list-image:hover, #cartGif:hover, div[type="gumBlob"]:hover, #chalkPressLogo:hover {
   /* Different color thread for hovering over clickables */
   cursor: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/chalk_cursor_scrollover.png?raw=true"), auto !important;
 }
@@ -591,32 +591,32 @@ a.remove:hover {
   font-size: 4em;
 }
 
-/* Archive */
+/* Press */
 
-#archiveContent {
+#pressContent {
   color: #463a26;
   font-weight: 900;
 }
 
-#archiveBigFoot {
+#pressBigFoot {
   width: 40vw;
   max-height: 60vh;
 }
 
 @media only screen and (max-width: 600px) {
-  #archiveBigFoot {
+  #pressBigFoot {
     margin-top: 5vh;
   }
 }
 
-/* Press */
-#pressContent {
+/* Archive */
+#archiveContent {
   display: flex;
   margin-left: 10vw;
 }
 
 @media only screen and (max-width: 600px) {
-  #pressContent {
+  #archiveContent {
     margin-top: 5vh;
   }
 }
@@ -630,7 +630,7 @@ a.remove:hover {
 }
 
 @media only screen and (max-width: 600px) {
-  #pressContent {
+  #archiveContent {
     display: flex;
     margin-left: 2vw;
     flex-direction: column;
