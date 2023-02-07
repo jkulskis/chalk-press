@@ -38,7 +38,7 @@ body {
   cursor: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/chalk_cursor.png?raw=true"), auto !important;
 }
 
-a:hover, button:hover, select:hover, .product-list-image:hover, #cartGif:hover, div[type="gumBlob"]:hover, #chalkPressLogo:hover {
+a:hover, button:hover, select:hover, .product-list-image:hover, #cartGif:hover, div[type="gumBlob"]:hover, #chalkPressLogo:hover, .product-image-choice {
   /* Different color thread for hovering over clickables */
   cursor: url("https://github.com/jkulskis/chalk-press/blob/main/source/images/chalk_cursor_scrollover.png?raw=true"), auto !important;
 }
@@ -576,6 +576,11 @@ a.remove:hover {
   color: white;
 }
 
+#cartEmptyText {
+  color: red;
+  font-size: 4em;
+}
+
 @media only screen and (max-width: 600px) {
   .cart {
     padding-left: 5vw;
@@ -584,12 +589,14 @@ a.remove:hover {
   .cart-list li p {
     background-color: transparent;
   }
+  #cartEmptyText {
+    font-size: 2.5em;
+    margin-top: 5vh;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
 }
 
-#cartEmptyText {
-  color: red;
-  font-size: 4em;
-}
 
 /* Press */
 

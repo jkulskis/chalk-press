@@ -19,11 +19,8 @@
 
           {% when 'sold-out' %}
           <div class="sold-out">
-            <h5>
-              {{ product.default_price | money_with_sign }}
-              <br/>
-              <em><br>Sold Out</em>
-            </h5>
+            <p>{{ product.default_price | money_with_sign }}</p>
+            <p>Sold Out</p>
           </div>
 
           {% when 'coming-soon' %}
